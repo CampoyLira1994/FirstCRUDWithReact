@@ -43,14 +43,15 @@ function useLocalStorage(itemName, initialValue) {
 export { useLocalStorage };
 
 
+
 // localStorage.removeItem('TODOS_V1');
 
 // const defaultTodos = [
-//   { text: 'Cortar cebolla', completed: true },
+//   { text: 'React Course', completed: true },
 //   { text: 'Tomar el Curso de Intro a React.js', completed: false },
-//   { text: 'Llorar con la Llorona', completed: false },
-//   { text: 'LALALALALA', completed: false },
-//   { text: 'Usar estados derivados', completed: true },
+//   { text: 'Complete L2 KNIME', completed: false },
+//   { text: 'Test1', completed: false },
+//   { text: 'Curso de Introducción a los Patrones de Diseño de Software', completed: true },
 // ];
 
 // localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
