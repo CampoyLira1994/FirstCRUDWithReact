@@ -1,0 +1,26 @@
+.CreateUserButton {
+    background-color: #70fa61;
+    box-shadow: 0px 5px 25px rgba(13, 156, 15, 0.5);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 50px;
+ 
+    bottom: 24px;
+    right: 24px;
+    font-weight: bold;
+    color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    height: 64px;
+    width: 64px;
+  
+    transform: rotate(0);
+    transition: .3s ease;
+  }
+  
+  .CreateUserButton:hover {
+    transform: rotate(224deg);
+  }
+  

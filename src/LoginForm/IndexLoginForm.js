@@ -1,11 +1,14 @@
 import React from 'react';
-import { TodoContext } from '../TodoContext';
-import './TodoForm.css';
 
-function TodoForm(){
+
+function LogForm(){
+
+    const [openModalCreateUser, setOpenModalCreateUser] = React.useState(false);
+    const TodoContext = React.createContext();
+
 
     const {
-        setOpenModal,
+        setOpenModalLogin,
         addTodo,
     } = React.useContext(TodoContext);
     const [newTodoValue, setNewTodoValue] = React.useState('');
@@ -13,21 +16,23 @@ function TodoForm(){
     const onSubmit = (event) => {
         event.preventDefault();
         addTodo(newTodoValue);
-        setOpenModal(false);
+        setOpenModalLogin(false);
     };
 
     const onCancel = () => {
-        setOpenModal(false);
+        openModalCreateUser(false);
     };
 
     const onChange = (event) => {
+        console.log(event);
+
         setNewTodoValue(event.target.value);
     };
 
     return(
         <form onSubmit={onSubmit}>
-            <label>Create new task</label>
-            <textarea placeholder="New task" value={newTodoValue} onChange={onChange}/>
+            <label>Create new user</label>
+            <textarea placeholder="New User" value={newTodoValue} onChange={onChange}/>
             <div className="TodoForm-buttonContainer">
             <button type='button' className="TodoForm-button TodoForm-button--cancel" onClick={onCancel}>Cancel</button>
             <button type="submit" className="TodoForm-button TodoForm-button--add">Add</button>
@@ -37,4 +42,4 @@ function TodoForm(){
 }
 
 
-export {TodoForm};
+export {LogForm};

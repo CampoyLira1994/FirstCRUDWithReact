@@ -10,6 +10,8 @@ import { CreateTodoButton } from '../CreateTodoButton';
 import { TodoForm } from '../TodoForm';
 import { Modal } from '../Modal';
 import { TodoContext } from '../TodoContext';
+import { CreateUserButton } from '../CreateUserButton/IndexCreateUserButton';
+import { LogForm } from '../LoginForm/IndexLoginForm';
 
 function AppUI() {
   const {
@@ -21,9 +23,21 @@ function AppUI() {
     openModal,
     setOpenModal,
   } = React.useContext(TodoContext);
-  
+  const {
+    openModalCreateUser,//Se creo pero aun falta ver donde se les asigan en el storage el valor
+    setOpenModalCreateUser
+  } = React.useContext(TodoContext);
+
   return (
     <>
+<CreateUserButton
+        setOpenModalCreateUser={setOpenModalCreateUser}
+      />
+  {openModalCreateUser && (
+        <Modal>
+          <LogForm />
+        </Modal>
+      )}
       <TodoCounter />
       <TodoSearch />
 
